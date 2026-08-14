@@ -15,10 +15,11 @@
 # 4. Import and inspect a dataset in R.
 # 5. Recognize objects, functions, and arguments in R code.
 # 6. Use R's built-in help system.
-# 7. Create your own GitHub repository for ENTO 8030.
-# 8. Connect a GitHub repository to an R Project.
-# 9. Make a Git commit.
-# 10. Push a commit to GitHub.
+# 7. Create your own private GitHub repository for ENTO 8030.
+# 8. Add the instructor as a collaborator.
+# 9. Connect a GitHub repository to an R Project.
+# 10. Make a Git commit.
+# 11. Push a commit to GitHub.
 #
 # ============================================================
 
@@ -312,23 +313,25 @@ mean(x, na.rm = TRUE)
 #
 # YOUR PERSONAL REPOSITORY
 #
-# Suggested name:
+# Naming convention:
 #
-# ENTO_8030_Work
+# ENTO_8030_LastName_FirstInitial
 #
-# or:
+# Example:
 #
-# YourName_ENTO8030
+# ENTO_8030_Smith_J
 #
 # Purpose:
 #   Store your own course work and practice using Git.
+#
+# Your repository will be PRIVATE.
 #
 # You will COMMIT and PUSH to this repository.
 
 
 
 # ------------------------------------------------------------
-# 9. CREATE A GITHUB REPOSITORY
+# 9. CREATE YOUR PERSONAL GITHUB REPOSITORY
 # ------------------------------------------------------------
 #
 # In your web browser:
@@ -339,13 +342,19 @@ mean(x, na.rm = TRUE)
 #
 #       New repository
 #
-# 3. Give the repository a name such as:
+# 3. Name your repository using:
 #
-#       ENTO_8030_Work
+#       ENTO_8030_LastName_FirstInitial
+#
+#    For example:
+#
+#       ENTO_8030_Smith_J
 #
 # 4. Add a description if desired.
 #
-# 5. Select PUBLIC or PRIVATE as directed by the instructor.
+# 5. Select:
+#
+#       PRIVATE
 #
 # 6. Initialize the repository with a README.
 #
@@ -354,12 +363,74 @@ mean(x, na.rm = TRUE)
 # 8. Create the repository.
 #
 #
-# STOP HERE until everyone has created a repository.
+# CHECKPOINT:
+#
+# Before continuing, confirm that your repository says:
+#
+#       Private
+#
+# near the repository name.
 
 
 
 # ------------------------------------------------------------
-# 10. COPY THE REPOSITORY URL
+# 10. ADD THE INSTRUCTOR AS A COLLABORATOR
+# ------------------------------------------------------------
+#
+# Your repository is private, so the instructor cannot access
+# it unless you explicitly provide access.
+#
+#
+# On your GitHub repository page:
+#
+# 1. Select:
+#
+#       Settings
+#
+# 2. Under Access, select:
+#
+#       Collaborators
+#
+#    or:
+#
+#       Collaborators and teams
+#
+#    The exact wording may vary slightly depending on your
+#    GitHub interface.
+#
+# 3. Select:
+#
+#       Add people
+#
+# 4. Search for the instructor's GitHub username:
+#
+#       Conorfair
+#
+# 5. Select the instructor.
+#
+# 6. Send the collaboration invitation.
+#
+#
+# The instructor must accept the invitation before collaborator
+# access becomes active.
+#
+#
+# CHECKPOINT:
+#
+# Your repository should now show a pending invitation for:
+#
+#       Conorfair
+#
+#
+# IMPORTANT:
+#
+# Do NOT make your repository public simply to share it with
+# the instructor.
+
+
+
+# ------------------------------------------------------------
+# 11. COPY THE REPOSITORY URL
 # ------------------------------------------------------------
 #
 # On your new GitHub repository:
@@ -372,7 +443,7 @@ mean(x, na.rm = TRUE)
 #
 # It should look similar to:
 #
-# https://github.com/YourUsername/ENTO_8030_Work.git
+# https://github.com/YourUsername/ENTO_8030_Smith_J.git
 
 
 
@@ -390,7 +461,7 @@ mean(x, na.rm = TRUE)
 
 
 # ------------------------------------------------------------
-# 11. CLONE YOUR PERSONAL REPOSITORY
+# 12. CLONE YOUR PERSONAL REPOSITORY
 # ------------------------------------------------------------
 #
 # In RStudio:
@@ -431,7 +502,7 @@ mean(x, na.rm = TRUE)
 
 
 # ------------------------------------------------------------
-# 12. VERIFY YOUR NEW R PROJECT
+# 13. VERIFY YOUR NEW R PROJECT
 # ------------------------------------------------------------
 
 getwd()
@@ -449,7 +520,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 13. CREATE YOUR FIRST R SCRIPT
+# 14. CREATE YOUR FIRST R SCRIPT
 # ------------------------------------------------------------
 #
 # In RStudio:
@@ -478,7 +549,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 14. CHECK GIT
+# 15. CHECK GIT
 # ------------------------------------------------------------
 #
 # Open the Git pane in RStudio.
@@ -495,7 +566,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 15. STAGE THE FILE
+# 16. STAGE THE FILE
 # ------------------------------------------------------------
 #
 # In the Git pane:
@@ -514,7 +585,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 16. CREATE A COMMIT
+# 17. CREATE A COMMIT
 # ------------------------------------------------------------
 #
 # Click:
@@ -537,7 +608,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 17. PUSH TO GITHUB
+# 18. PUSH TO GITHUB
 # ------------------------------------------------------------
 #
 # After committing, select:
@@ -570,7 +641,7 @@ list.files()
 
 
 # ------------------------------------------------------------
-# 18. VERIFY THE PUSH
+# 19. VERIFY THE PUSH
 # ------------------------------------------------------------
 #
 # Return to your GitHub repository in your browser.
@@ -636,6 +707,15 @@ list.files()
 # Personal GitHub Repository
 #
 #
+# Your personal repository is PRIVATE.
+#
+# The instructor has access because you have added:
+#
+#       Conorfair
+#
+# as a collaborator.
+#
+#
 # Keeping these repositories separate reduces conflicts between
 # course updates and your own work.
 
@@ -649,14 +729,15 @@ list.files()
 #
 # The goal is to practice using R's documentation rather than
 # memorizing commands.
+#
+# To complete these exercises, return to the COURSE repository
+# and reopen Discussion 01 if necessary.
 
 
 
 # ------------------------------------------------------------
 # OPTIONAL EXERCISE 1
 # ------------------------------------------------------------
-#
-# Return to the COURSE repository and open Discussion 01 again.
 #
 # Use R's help system to determine how to calculate the median
 # mortality.
@@ -739,7 +820,11 @@ list.files()
 #
 # 14. What does PUSH do?
 #
-# 15. Why are we keeping the course repository separate from
+# 15. Why is your personal repository private?
+#
+# 16. Why has the instructor been added as a collaborator?
+#
+# 17. Why are we keeping the course repository separate from
 #     your personal ENTO 8030 repository?
 #
 #
