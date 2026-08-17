@@ -13,7 +13,7 @@
 #
 # Suggested filename:
 #
-# discussion02_working.R
+# discussion01_working.R
 #
 # Commit your completed version to your personal repository
 # after class.
@@ -188,7 +188,7 @@ summary(dat)
 # DISCUSSION:
 #
 # How many observations are present?
-#
+# 
 # How many variables are present?
 #
 # What type of variable is Treatment?
