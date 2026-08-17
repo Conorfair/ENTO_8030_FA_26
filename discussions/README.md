@@ -26,9 +26,9 @@ Before each discussion session:
 
 ## Discussion Schedule
 
-| Discussion | Topic                                     | Folder                 |
-| ---------- | ----------------------------------------- | ---------------------- |
-| 01         | GitHub, R Projects, and Getting Help in R | `01_github_rprojects/` |
+| Discussion | Topic                                     | Folder                                     |
+| ---------- | ----------------------------------------- | ------------------------------------------ |
+| 01         | GitHub, R Projects, and Getting Help in R | [Open Discussion 01](01_github_rprojects/) |
 | 02         | t-tests and Chi-square tests              | `02_ttest_chisquare/`  |
 | 03         | Linear Models                             | `03_linear_models/`    |
 | 04         | emmeans and Compact Letter Displays       | `04_emmeans_cld/`      |
