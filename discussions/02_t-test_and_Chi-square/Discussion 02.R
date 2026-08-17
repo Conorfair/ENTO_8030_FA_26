@@ -5,6 +5,19 @@
 # t-tests, Chi-square Tests, Tidyverse Basics, and ggplot2
 # ============================================================
 #
+# ============================================================
+# BEFORE YOU BEGIN
+#
+# Save a copy of this script in your personal ENTO 8030
+# repository before making changes.
+#
+# Suggested filename:
+#
+# discussion02_working.R
+#
+# Commit your completed version to your personal repository
+# after class.
+# ============================================================
 # Goals for today's discussion:
 #
 # By the end of this session, you should be able to:
