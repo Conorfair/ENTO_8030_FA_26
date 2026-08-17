@@ -18,7 +18,7 @@ By the end of this discussion, you should be able to:
 
 Open:
 
-[Discussion 01.R](Discussion%2001.R)
+[Discussion 01.R](Discussion_01.R)
 
 The example dataset is located at:
 
