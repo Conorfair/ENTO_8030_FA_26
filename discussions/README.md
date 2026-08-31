@@ -42,7 +42,7 @@ Do not complete your personal course work directly in the instructor-maintained 
 |---|---|---|
 | 01 | GitHub, R Projects, and Getting Help in R | [Open Discussion 01](01_github_rprojects/) |
 | 02 | t-tests and Chi-square Tests | [Open Discussion 02](02_t-test_and_Chi-square/) |
-| 03 | Linear Models | `03_linear_models/` |
+| 03 | Linear Models | [Open Discussion 03](03_linear_models/) |
 | 04 | emmeans and Compact Letter Displays | `04_emmeans_cld/` |
 | 05 | Random Effects Models | `05_random_effects/` |
 | 06 | ggplot2 and Data Visualization | `06_ggplot/` |
@@ -62,7 +62,13 @@ Throughout the semester, you will work with **two separate repositories and R Pr
 
 ### Course Repository
 
-The course repository contains instructor-provided materials.
+The instructor-maintained course repository contains datasets,
+discussion scripts, examples, and course resources. At the beginning of
+a discussion or whenever new materials are announced, open the course R
+Project and **pull** the newest changes.
+
+Do not routinely edit your working copies of course files inside the
+instructor-maintained repository.
 
 You will primarily:
 
@@ -80,7 +86,18 @@ Treat this repository as the instructor copy of the course materials. Avoid edit
 
 ### Personal Repository
 
-Your private ENTO 8030 repository contains **your work**.
+Your private ENTO 8030 repository contains your own course work. After
+pulling new materials into the course repository:
+
+1.  Read the `README.md` for that discussion.
+2.  Copy the student R script(s) listed for that week into the
+    corresponding folder of your private repository.
+3.  Copy any required datasets listed in the weekly `README.md` from the
+    course repository's `data/` folder into the `data/` folder of your
+    private repository.
+4.  Open your private R Project.
+5.  Edit and run the copied scripts there.
+6.  Stage, commit, and push your work to your private GitHub repository.
 
 After copying the materials needed for a discussion into your personal repository, you will:
 
