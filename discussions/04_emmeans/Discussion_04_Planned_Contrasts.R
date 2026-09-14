@@ -78,6 +78,14 @@ model_biomass <- lm(biomass_m2 ~ fert * light, data = biomass)
 # Examine the model and omnibus tests.
 summary(model_biomass)
 car::Anova(model_biomass, type = 2)
+car::Anova(model_biomass, type =3)
+
+# Type II tests each main effect after accounting for the other main effects, but not after accounting for interactions that contain the effect. The interaction itself is tested after accounting for the main effects.
+
+# Type III tests each term after accounting for all other terms in the model, including interactions that contain that term.
+
+# The main difference is how they test the lower-order terms when interaction terms are present.
+# When an interaction is important, a simple "main effect" is often not the most biologically informative question anyway. We usually interpret the interaction first and then exaimine the relevant conditional effects.
 
 # MODEL CHECK
 par(mfrow = c(2, 2))
