@@ -78,14 +78,20 @@ model_biomass <- lm(biomass_m2 ~ fert * light, data = biomass)
 # Examine the model and omnibus tests.
 summary(model_biomass)
 car::Anova(model_biomass, type = 2)
-car::Anova(model_biomass, type =3)
+car::Anova(model_biomass, type = 3)
 
 # Type II tests each main effect after accounting for the other main effects, but not after accounting for interactions that contain the effect. The interaction itself is tested after accounting for the main effects.
 
+# Use when your primary interest is in the overall/main effects of predictors and you do not need to interpret those effects conditional on an interaction.
+
 # Type III tests each term after accounting for all other terms in the model, including interactions that contain that term.
 
+# Use when an interaction term is an important part of your biological hypothesis and you want tests of lower-order terms while that interaction remains in the model.
+
+# If an interaction is important, interpret the interaction first, The lower-order Type III tests are conditional and usually should not be interpreted as simple "overall main effects."
+
 # The main difference is how they test the lower-order terms when interaction terms are present.
-# When an interaction is important, a simple "main effect" is often not the most biologically informative question anyway. We usually interpret the interaction first and then exaimine the relevant conditional effects.
+# When an interaction is important, a simple "main effect" is often not the most biologically informative question anyway. We usually interpret the interaction first and then examine the relevant conditional effects.
 
 # MODEL CHECK
 par(mfrow = c(2, 2))
@@ -124,12 +130,12 @@ confint(emm_cells)
 # Compare fertilizer treatments separately within each light treatment.
 emm_fert_within_light <- emmeans(model_biomass, ~ fert | light)
 
-pairs(emm_fert_within_light, adjust = "tukey")
+pairs(emm_fert_within_light, adjust = "tukey", infer = T) 
 
 # Compare light treatments separately within each fertilizer treatment.
 emm_light_within_fert <- emmeans(model_biomass, ~ light | fert)
 
-pairs(emm_light_within_fert, adjust = "tukey")
+pairs(emm_light_within_fert, adjust = "tukey", infer = T) 
 
 # ACTIVE LEARNING 2 ------------------------------------------
 # Compare the two outputs above.
@@ -161,34 +167,52 @@ pairs(emm_light_within_fert, adjust = "tukey")
 # NOTE: weights summing to zero makes a valid contrast.
 # It does NOT automatically make a set of contrasts orthogonal.
 
+# ACTIVE LEARNING 3 ------------------------------------------
+#
+# Biological question:
+# Does fertilization increase biomass under the L+ light treatment?
+#
 # First inspect the order of the estimated means:
 emm_cells
 
-# ACTIVE LEARNING 3 ------------------------------------------
-# Write a biological hypothesis involving the fert × light treatment cells.
-# Then write the contrast weights that represent that hypothesis.
+# 1. Which two means are relevant to this hypothesis?
 #
-# H0 in words:
+# 2. Which cell should receive a positive weight?
+#    Which should receive a negative weight?
+#    Which cells are not part of the comparison?
 #
-# H1 in words:
+# Cell order:
+#             F- L-    F+ L-    F- L+    F+ L+
+# Weights:
 #
-# Contrast weights:
 #
-# Check:
-# sum(c(...))
+# 3. Check that the weights sum to zero:
+sum(c(...))
+#
+# 4. Write the null hypothesis in words:
+# H0:
+#
+# 5. Write the alternative hypothesis in words:
+# HA:
+#
+# 6. Run the planned contrast:
 
+planned <- contrast(
+  emm_cells,
+  method = list(
+    "Fertilizer effect under L+" = c(...)
+  ),
+  adjust = "none"
+)
 
-# Example syntax after you determine the correct order and weights:
+summary(planned, infer = TRUE)
+
+# 7. Interpret:
+# Estimate =
+# 95% CI =
+# p-value =
 #
-# planned <- contrast(
-#   emm_cells,
-#   method = list(
-#     "Biological comparison" = c(...)
-#   ),
-#   adjust = "none"
-# )
-#
-# summary(planned, infer = TRUE)
+# Write one biological conclusion:
 
 # QUESTION:
 # Why might adjust = "none" be defensible for a small number of genuinely
@@ -288,6 +312,32 @@ emm_cld
 # Groups that share a letter should NOT be described as "the same."
 # The analysis simply did not detect a difference at the chosen threshold.
 
+# ------------------------------------------------------------
+# ADD CLD LETTERS TO A FIGURE
+# ------------------------------------------------------------
+
+# The raw observations are shown in the background.
+# Points and 95% CIs represent the estimated marginal means.
+# CLD letters summarize the Tukey-adjusted pairwise comparisons.
+
+ggplot() +
+  # Raw observations
+  geom_point(data = biomass, aes(x = fert, y = biomass_m2, color = light),
+             position = position_jitterdodge(jitter.width = 0.08, dodge.width = 0.50),
+             alpha = 0.50) +
+  # 95% confidence intervals for EMMs
+  geom_errorbar(data = emm_cld, aes(x = fert, ymin = lower.CL, ymax = upper.CL,
+                                    color = light, group = light),
+                position = position_dodge(width = 0.50), width = 0.10) +
+  # Estimated marginal means
+  geom_point(data = emm_cld, aes(x = fert, y = emmean, color = light, group = light),
+             position = position_dodge(width = 0.50), size = 3) +
+  # Compact letter displays
+  geom_text(data = emm_cld, aes(x = fert, y = emmean, label = .group, group = light),
+            position = position_dodge(width = 0.8), size = 5) +
+  theme_classic() +
+  labs(x = "Fertilizer Treatment", y = expression("Biomass (g/m"^2*")"), 
+       color = "Light Treatment")
 
 # ------------------------------------------------------------
 # 10. FINAL SYNTHESIS
