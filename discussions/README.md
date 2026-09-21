@@ -44,7 +44,7 @@ Do not complete your personal course work directly in the instructor-maintained 
 | 02 | t-tests and Chi-square Tests | [Open Discussion 02](02_t-test_and_Chi-square/) |
 | 03 | Linear Models | [Open Discussion 03](03_linear_models/) |
 | 04 | emmeans and Compact Letter Displays | [Open Discussion 04](04_emmeans/) |
-| 05 | Random Effects Models | `05_random_effects/` |
+| 05 | Random Effects Models | [Open Discussion 04](05_random_effects/) |
 | 06 | ggplot2 and Data Visualization | `06_ggplot/` |
 | 07 | Bernoulli and Binomial Models | `07_binomial/` |
 | 08 | Poisson and Negative Binomial Models | `08_count_models/` |
