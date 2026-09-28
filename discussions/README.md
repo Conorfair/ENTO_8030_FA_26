@@ -45,7 +45,7 @@ Do not complete your personal course work directly in the instructor-maintained 
 | 03 | Linear Models | [Open Discussion 03](03_linear_models/) |
 | 04 | emmeans and Compact Letter Displays | [Open Discussion 04](04_emmeans/) |
 | 05 | Experimental Design and Random Effects Models | [Open Discussion 05](05_experimental_design_and_random_effects/) |
-| 06 | ggplot2 and Data Visualization | `06_ggplot/` |
+| 06 | ggplot2 and Data Visualization | [Open Discussion 06](06_ggplot/) |
 | 07 | Bernoulli and Binomial Models | `07_binomial/` |
 | 08 | Poisson and Negative Binomial Models | `08_count_models/` |
 | Advanced | Advanced Topics | `advanced_topics/` |
