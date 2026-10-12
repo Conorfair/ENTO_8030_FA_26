@@ -50,7 +50,7 @@ By the end of the discussion, students should be able to:
     demonstrations, new applications, and peer-explanation prompts.
 -   `Discussion_06_Advanced_ggplot2_Solutions.R` --- instructor version
     containing suggested solutions for the **DO** exercises.
--   `data/simulated_moth_flush_data.csv` --- simulated dataset used for
+-   `data/moth_flush_data.csv` --- simulated dataset used for
     the applied portion of the discussion.
 
 The guided examples use `palmerpenguins::penguins`.
@@ -84,7 +84,7 @@ library(patchwork)
 ## Before class
 
 1.  Pull the newest version of the ENTO 8030 course repository.
-2.  Confirm that `data/simulated_moth_flush_data.csv` is available.
+2.  Confirm that `data/moth_flush_data.csv` is available.
 3.  Copy `Discussion_06_Advanced_ggplot2.R` into your private ENTO 8030
     repository.
 4.  Copy `moth_flush_data.csv` into the `data/` folder of your private ENTO 8030 repository.    
