@@ -112,7 +112,7 @@ performance::check_model(mod_lizard)
 mod_lizard2 <- glm(cbind(grahami, opalinus) ~ Site + Diameter,
                    family = binomial(), data = lizards)
 summary(mod_lizard2)
-print(emmeans(mod_lizard2, ~ Site * Diameter, type = "response"))
+print(emmeans(mod_lizard2, ~ Site + Diameter, type = "response"))
 
 # TEACH: Why use cbind(successes, failures), not grahami alone?
 # What is the unit of sampling, and what assumptions justify
