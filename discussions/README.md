@@ -48,6 +48,7 @@ Do not complete your personal course work directly in the instructor-maintained 
 | 06 | ggplot2 and Data Visualization | [Open Discussion 06](06_ggplot/) |
 | 07 | Bernoulli and Binomial Models | [Open Discussion 07](07_logistic_regression) |
 | 08 | Poisson and Negative Binomial Models | [Open Discussion 08](08_count_models) |
+| 09 | Multivariate Analysis | [Open Discussion 09](09_multivariate_analysis) |
 | Advanced | Advanced Topics | `advanced_topics/` |
 
 The schedule and materials may be updated during the semester.
