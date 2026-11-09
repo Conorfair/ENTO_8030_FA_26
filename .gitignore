@@ -48,3 +48,4 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 /discussions/09_multivariate_analysis/solutions/
+.DS_Store
