@@ -4,7 +4,6 @@
 # ======================================================================
 # Open the course R Project from the repository root.
 # Source file: Time Series Analysis R Markdown supplied for Discussion 10.
-# This script intentionally retains worked examples and original section order.
 # Do not use setwd(); required survival data: data/Duck survival.csv.
 # Install missing packages once using the instructions in README.md.
 
@@ -619,7 +618,6 @@ legend("topright", bty = "n", c("Old", "Young"), lty = 2:3)
 #The presence of censored data means that the results indicate conditional probabilities of 
 #experiencing death after the duration of the study - we do not reach the median (0.5) survival rates
 
-# [Original numerical claim omitted: verify against course data before teaching.]
 
 # Life expectancy can be approximated for each age class by summing the area under the Kaplan-Meier
 # survival curves.
@@ -652,13 +650,10 @@ summary(cox_model)
 cox.zph(cox_model)
 
 # Tests for overall significance of the model:
-# [Original numerical claim omitted: verify against course data before teaching.]
 
 # Compares the fit of the model to the fit of the null model by estimating the ratio of their
 # likelihoods (or difference in log likelihoods).
-# [Original numerical claim omitted: verify against course data before teaching.]
 # Tests how far the estimated parameters are from zero.
-# [Original numerical claim omitted: verify against course data before teaching.]
 # The test is based on the slope of the likelihood function at the observed values of the variables in
 # the model. The estimated score estimates the improvement in model fit if additional variables are
 # included in the model.
@@ -745,8 +740,6 @@ points(time_pts[which.min(Survival_vector_old)+1],
 # RMST integrates from day 0 through a common observed follow-up horizon.
 
 # These estimates are restricted areas under survival curves, not unrestricted life expectancy.
-# [Original numerical claim omitted: verify against course data before teaching.]
-# [Original numerical claim omitted: verify against course data before teaching.]
 
 # Compare Cox and Kaplan-Meier survival estimates only over a common
 # follow-up horizon; neither model estimates unrestricted life expectancy
